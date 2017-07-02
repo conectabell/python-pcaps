@@ -31,7 +31,7 @@ if args.live:
     #print capture
     if args.timeout == 0:
         print ">>> Iniciando Captura ininterrumpida (timeout 0), limitando por el contados de paquetes: ", args.packet_limit
-        for i, packet in enumerate(capture.sniff_continuously(packet_count=int(args.limit_output))):
+        for i, packet in enumerate(capture.sniff_continuously(packet_count=int(args.packet_limit))):
             print 'Packet num: ', i
             if args.verbosity:
                 print 'Packet Content --=> ', packet
